@@ -3,60 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubai Property Intelligence</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Dubai Property Intelligence</title>
 </head>
 <body>
+    <header>
+        <h1>Dubai Property Intelligence</h1>
+        <div class="header-info">
+            <span id="date"></span>
+            <button onclick="contactUs()">Contact</button>
+        </div>
+    </header>
     <nav>
         <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#investment-simulator">Investment Simulator</a></li>
-            <li><a href="#property-comparator">Property Comparator</a></li>
-            <li><a href="#amortization-calculator">Amortization Calculator</a></li>
-            <li><a href="#currency-converter">Currency Converter</a></li>
-            <li><a href="#risk-analyzer">Risk Analyzer</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>Welcome to Dubai Property Intelligence</h1>
-        <p>A tool for investors to explore and analyze properties in Dubai.</p>
-    </header>
-    <section id="dashboard">
-        <h2>Dashboard</h2>
-        <p>Overview of property market trends and investment opportunities.</p>
-    </section>
-    <section id="investment-simulator">
-        <h2>Investment Simulator</h2>
-        <p>Simulate potential investment scenarios.</p>
-    </section>
-    <section id="property-comparator">
-        <h2>Property Comparator</h2>
-        <p>Compare different properties side by side.</p>
-    </section>
-    <section id="amortization-calculator">
-        <h2>Amortization Calculator</h2>
-        <p>Calculate your mortgage payments.</p>
-    </section>
-    <section id="currency-converter">
-        <h2>Currency Converter</h2>
-        <p>Convert currencies for your investments.</p>
-    </section>
-    <section id="risk-analyzer">
-        <h2>Risk Analyzer</h2>
-        <p>Assess the risks associated with property investments.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    <main>
+        <section id="properties">
+            <h2>Available Properties</h2>
+            <div class="property-card"> 
+                <h3>Property Name 1</h3>
+                <p>Price: $1,000,000</p>
+                <p>Yield: 7%</p>
+                <p>Tags: Luxury, Investment</p>
+            </div>
+            <div class="property-card"> 
+                <h3>Property Name 2</h3>
+                <p>Price: $1,500,000</p>
+                <p>Yield: 6%</p>
+                <p>Tags: Affordable, Family</p>
+            </div>
+            <!-- More property cards -->
+        </section>
+    </main>
     <footer>
-        <p>© 2026 Dubai Property Intelligence. All rights reserved.</p>
+        <p>Contact us: info@dubai-property-intelligence.com</p>
     </footer>
+    <script>
+        document.getElementById('date').innerText = new Date().toLocaleString();
+        function contactUs() {
+            window.location.href = 'mailto:info@dubai-property-intelligence.com';
+        }
+    </script>
 </body>
 </html>
